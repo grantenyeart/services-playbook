@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>The Services Playbook · Rapid Reach</title>
-<meta name="description" content="New rep onboarding: every service we offer, what to tell the client, pricing, and commission." />
+<meta name="description" content="New rep onboarding: every service, what to tell the client, pricing, real-dollar payouts, and how to pitch it." />
 <meta name="theme-color" content="#020817" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -59,6 +59,13 @@
   .pill .sub{color:var(--muted);font-weight:500;}
   .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   @media(max-width:760px){.twocol{grid-template-columns:1fr;}}
+  .pay{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid var(--border);padding:11px 0;}
+  .pay:last-child{border-bottom:none;}
+  .pay .svc{font-weight:700;font-size:15.5px;}
+  .pay .ex{color:var(--muted2);font-size:12.5px;font-weight:500;}
+  .pay .amt{font-weight:700;font-size:14.5px;white-space:nowrap;color:var(--muted);}
+  .pay .amt b{color:var(--gold2);font-weight:800;}
+  @media(max-width:600px){.pay{flex-direction:column;gap:3px;} .pay .amt{white-space:normal;}}
   .talk{ margin-top:20px; background:rgba(245,158,11,.07); border:1px solid rgba(245,158,11,.22); border-radius:14px; padding:16px 18px; }
   .talk .lh{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
   .talk p{color:#e2e8f0;font-size:14.5px;line-height:1.5;}
@@ -78,7 +85,7 @@
 </head>
 <body>
 <div class="progress" id="prog"></div>
-<div class="counter"><b id="cur">01</b> / <span id="tot">13</span></div>
+<div class="counter"><b id="cur">01</b> / <span id="tot">17</span></div>
 <div class="nav"><button id="up" aria-label="Previous">&uarr;</button><button id="down" aria-label="Next">&darr;</button></div>
 <div class="hint">swipe / scroll &middot; or use &uarr; &darr;</div>
 
@@ -89,9 +96,9 @@
     <div class="mark"><span></span><span></span><span></span></div>
     <div class="kicker">Rapid Reach &middot; New Rep Onboarding</div>
     <h1 class="title">The Services <span class="gold">Playbook</span></h1>
-    <p class="lead" style="margin-top:18px;font-size:clamp(17px,2.8vw,22px);color:#cbd5e1;">Everything we offer, what to tell the client, and how you get paid.</p>
+    <p class="lead" style="margin-top:18px;font-size:clamp(17px,2.8vw,22px);color:#cbd5e1;">Everything we offer, what to tell the client, what you get paid, and how to pitch it.</p>
     <div class="monogram-wrap"><div class="monogram">GE</div></div>
-    <div class="foot"><p class="kicker" style="margin:0;">5 Services &middot; Pricing &middot; Commission &middot; Payout</p></div>
+    <div class="foot"><p class="kicker" style="margin:0;">Services &middot; Pricing &middot; Payout &middot; The Pitch</p></div>
   </section>
 
   <!-- 2 HOW TO USE -->
@@ -101,10 +108,10 @@
     <div class="grid g3">
       <div class="card"><div class="ch" style="margin-top:0">Know it</div><div class="cd">What each service actually does.</div></div>
       <div class="card"><div class="ch" style="margin-top:0">Pitch the benefit</div><div class="cd">What to tell the client, in their language.</div></div>
-      <div class="card"><div class="ch" style="margin-top:0">Get paid</div><div class="cd">Your commission on every deal.</div></div>
+      <div class="card"><div class="ch" style="margin-top:0">Get paid</div><div class="cd">Real dollars on every deal you set or close.</div></div>
     </div>
-    <p class="lead" style="margin-top:16px;">Every service gets one slide: what it is, what to say, the price, and your cut. Then how we collect payment and when your commission locks.</p>
-    <div class="talk"><div class="lh">Talk track</div><p>Master these five and you can sell the whole stack. Always sell the client the benefit and the result, never the feature.</p></div>
+    <p class="lead" style="margin-top:16px;">Each service slide gives you what it is, what to say, the price, and your cut. Then the real-dollar payout, and exactly how to pitch and book the call.</p>
+    <div class="talk"><div class="lh">Talk track</div><p>Master these five and you can sell the whole stack. Always sell the client the result, never the feature.</p></div>
   </section>
 
   <!-- 3 THE 5 SERVICES -->
@@ -118,7 +125,7 @@
       <div class="pill"><span class="dot">4</span> Detailer Growth System (DGS) <span class="sub">&middot; repeat revenue engine</span></div>
       <div class="pill"><span class="dot">5</span> Meta (Facebook) Ads <span class="sub">&middot; 3 to 4 ceramics/week</span></div>
     </div>
-    <div class="talk"><div class="lh">Talk track</div><p>Most clients start with one and grow into the bundle. Your job is to match the service to the pain they tell you.</p></div>
+    <div class="talk"><div class="lh">Talk track</div><p>Most clients start with one and grow into the bundle. Match the service to the pain they tell you.</p></div>
   </section>
 
   <!-- 4 GOOGLE ADS -->
@@ -126,14 +133,14 @@
     <div class="kicker">Service 1 of 5 &middot; Lead Gen</div>
     <h2 class="title">Google Ads</h2>
     <div class="twocol">
-      <div class="card"><div class="saythis">What it is</div><div class="cd">We get their company ranked at the top of Google and bring in about 10 extra details a week. No money up front, fully performance based.</div></div>
+      <div class="card"><div class="saythis">What it is</div><div class="cd">We rank their company at the top of Google and bring in about 10 extra details a week. No money up front, fully performance based.</div></div>
       <div class="card"><div class="saythis">What to tell the client</div><div class="cd pitch">"We put you at the #1 spot on Google. You only pay for qualified leads, real buying-intent calls, and it's just 10% of your basic detail."</div></div>
     </div>
     <div class="twocol" style="margin-top:16px;">
       <div class="card"><div class="saythis">Price</div><div class="cd">10% of their interior/exterior detail per qualified lead. A $250 detail = $25 per lead, flat no matter the job size.</div></div>
-      <div class="card"><div class="saythis">Your commission</div><div class="cd">Setter 40%, Closer 25% of the first bi-weekly invoice. No setter on the deal? Closer gets the full 40%.</div></div>
+      <div class="card"><div class="saythis">Your commission</div><div class="cd">Setter 40%, Closer 25% of the first bi-weekly invoice (no setter, closer gets 40%).<br><b style="color:#fde68a">~$500 invoice: Setter $200, Closer $125.</b></div></div>
     </div>
-    <div class="talk"><div class="lh">Talk track</div><p>The magic line: even if that lead books a $1,000 ceramic, we still only charge $25. Qualified means buying potential, never price-shoppers or booked-out slots.</p></div>
+    <div class="talk"><div class="lh">Talk track</div><p>The magic line: even if that lead books a $1,000 ceramic, we still only charge $25. Qualified means buying potential, never price-shoppers.</p></div>
   </section>
 
   <!-- 5 WEBSITE -->
@@ -145,10 +152,10 @@
       <div class="card"><div class="saythis">What to tell the client</div><div class="cd pitch">"There's a big difference between looking good and performing good. Yours will book jobs and show up on Google and ChatGPT. One extra job pays for it."</div></div>
     </div>
     <div class="twocol" style="margin-top:16px;">
-      <div class="card"><div class="saythis">Price</div><div class="cd">$500 basic (looks good) or $1,000 to $1,500 optimized, plus a $50/mo retainer. Anchor at $2,000, financing available, or bundle it into DGS.</div></div>
-      <div class="card"><div class="saythis">Your commission</div><div class="cd">Ad Manager 30%, Setter 20%, Closer 30% from Setter + 20% from Ad Manager.</div></div>
+      <div class="card"><div class="saythis">Price</div><div class="cd">$500 basic or $1,000 to $1,500 optimized, plus a $50/mo retainer. Anchor at $2,000, financing available, or bundle into DGS.</div></div>
+      <div class="card"><div class="saythis">Your commission</div><div class="cd">Ad Manager 30%, Setter 20%, Closer 30% from Setter + 20% from Ad Manager.<br><b style="color:#fde68a">$1,000 site: Setter $200, Ad Mgr $300, Closer $200 to $300.</b></div></div>
     </div>
-    <div class="talk"><div class="lh">Talk track</div><p>The full teardown play (phone test, show one of ours, do the math) lives in the <a class="reflink" href="https://grantenyeart.github.io/website-playbook/" target="_blank" rel="noopener">Website Pitch deck</a>.</p></div>
+    <div class="talk"><div class="lh">Talk track</div><p>The full teardown play is in the <a class="reflink" href="https://grantenyeart.github.io/website-playbook/" target="_blank" rel="noopener">Website Pitch deck</a>: phone test, show one of ours, do the math.</p></div>
   </section>
 
   <!-- 6 AI RECEPTIONIST -->
@@ -156,12 +163,12 @@
     <div class="kicker">Service 3 of 5 &middot; AI</div>
     <h2 class="title">AI Receptionist</h2>
     <div class="twocol">
-      <div class="card"><div class="saythis">What it is</div><div class="cd">Answers every call and text and books straight into their calendar. Or backup mode: it only catches the calls they miss. Fully customizable, can even clone their voice.</div></div>
+      <div class="card"><div class="saythis">What it is</div><div class="cd">Answers every call and text and books straight into their calendar. Or backup mode: only catches missed calls. Customizable, can even clone their voice.</div></div>
       <div class="card"><div class="saythis">What to tell the client</div><div class="cd pitch">"You'll never miss a lead again. It answers, handles questions, and books jobs while you're under a car or asleep. You get your nights and weekends back."</div></div>
     </div>
     <div class="twocol" style="margin-top:16px;">
       <div class="card"><div class="saythis">Price</div><div class="cd">Setup $1,000 (backup mode) up to $1,500 (full implementation), then a $500/month residual.</div></div>
-      <div class="card"><div class="saythis">Your commission</div><div class="cd">Setter or Ad Manager 25%, Closer 40% of the first bi-weekly invoice.</div></div>
+      <div class="card"><div class="saythis">Your commission</div><div class="cd">Setter or Ad Manager 25%, Closer 40% of the first invoice.<br><b style="color:#fde68a">$1,500 setup: Setter $375, Closer $600.</b></div></div>
     </div>
     <div class="talk"><div class="lh">Talk track</div><p>For anti-AI clients, sell backup mode first (only answers missed calls), then demo it live. Hearing it work flips the skeptics.</p></div>
   </section>
@@ -171,12 +178,12 @@
     <div class="kicker">Service 4 of 5 &middot; Software</div>
     <h2 class="title">Detailer Growth System (DGS)</h2>
     <div class="twocol">
-      <div class="card"><div class="saythis">What it is</div><div class="cd">Our own software. Tracks every lead in one place, sends mass text and email campaigns to past and no-show clients, and fires automatic review requests and reminder texts to kill no-shows. Booking page, upsells, memberships CRM.</div></div>
-      <div class="card"><div class="saythis">What to tell the client</div><div class="cd pitch">"One place for every lead. Text your whole customer list a promo in one click, automate your reviews, and stop no-shows. Your past customers become repeat revenue."</div></div>
+      <div class="card"><div class="saythis">What it is</div><div class="cd">Our own software. Tracks every lead, sends mass text and email campaigns to past and no-show clients, and fires automatic review requests and reminder texts to kill no-shows. Booking page, upsells, memberships CRM.</div></div>
+      <div class="card"><div class="saythis">What to tell the client</div><div class="cd pitch">"One place for every lead. Text your whole list a promo in one click, automate your reviews, and stop no-shows. Your past customers become repeat revenue."</div></div>
     </div>
     <div class="twocol" style="margin-top:16px;">
       <div class="card"><div class="saythis">Price</div><div class="cd">$500 to $750 per month, billed monthly. We provide the prebuilt campaigns they send.</div></div>
-      <div class="card"><div class="saythis">Your commission</div><div class="cd">Setter or Ad Manager 25%, Closer 60% of the first month.</div></div>
+      <div class="card"><div class="saythis">Your commission</div><div class="cd">Setter or Ad Manager 25%, Closer 60% of the first month.<br><b style="color:#fde68a">$500/mo: Setter $125, Closer $300.</b></div></div>
     </div>
     <div class="talk"><div class="lh">Talk track</div><p>Never call it GoHighLevel or white-label. It is our software that we built. DGS is the anchor you bundle the website and AI into.</p></div>
   </section>
@@ -190,8 +197,8 @@
       <div class="card"><div class="saythis">What to tell the client</div><div class="cd pitch">"This is where your $1,000 ceramic jobs come from. We build and run all of it. You only pay when we actually book you a job."</div></div>
     </div>
     <div class="twocol" style="margin-top:16px;">
-      <div class="card"><div class="saythis">Price</div><div class="cd">20% per booked ceramic job. Client covers ad spend (we recommend ~$35/day). $1,000 one-time setup. Payment plans available.</div></div>
-      <div class="card"><div class="saythis">Your commission</div><div class="cd">Performance model. Follows the Standard Lead Gen split (Setter 40% / Closer 25% of first invoice). Confirm with Grant.</div></div>
+      <div class="card"><div class="saythis">Price</div><div class="cd">20% per booked ceramic job. Client covers ad spend (~$35/day). $1,000 one-time setup. Payment plans available.</div></div>
+      <div class="card"><div class="saythis">Your commission</div><div class="cd">Performance model. Follows the Standard Lead Gen split: Setter 40%, Closer 25% of first invoice. <b style="color:#fde68a">(Confirm with Grant.)</b></div></div>
     </div>
     <div class="talk"><div class="lh">Talk track</div><p>"We only get paid when you get paid" is the killer line for a burned client. Lead with it.</p></div>
   </section>
@@ -211,9 +218,9 @@
     <div class="kicker">Part 2 &middot; Payment Collection</div>
     <h2 class="title">How we collect, in order</h2>
     <div class="rows">
-      <div class="row"><div class="num">1</div><div><div class="ch" style="margin:0 0 3px">Invoice</div><div class="cd">Bi-weekly, monthly, or one-time. First payment is collected before onboarding (except Lead Gen). Recurring is set up via Square after the first payment.</div></div></div>
-      <div class="row"><div class="num">2</div><div><div class="ch" style="margin:0 0 3px">Contract + payment</div><div class="cd">Agreement is signed before the invoice is sent. Payment link goes out right after signature. Onboarding call is scheduled only after payment confirms.</div></div></div>
-      <div class="row"><div class="num">3</div><div><div class="ch" style="margin:0 0 3px">Recurring billing</div><div class="cd">Auto-draft every 30 days. 3-day grace, paused after 3 days, late fee after 7, account terminated after 14.</div></div></div>
+      <div class="row"><div class="num">1</div><div><div class="ch" style="margin:0 0 3px">Invoice</div><div class="cd">Bi-weekly, monthly, or one-time. First payment is collected before onboarding (except Lead Gen). Recurring set up via Square after the first payment.</div></div></div>
+      <div class="row"><div class="num">2</div><div><div class="ch" style="margin:0 0 3px">Contract + payment</div><div class="cd">Agreement signed before the invoice is sent. Payment link goes out right after signature. Onboarding call scheduled only after payment confirms.</div></div></div>
+      <div class="row"><div class="num">3</div><div><div class="ch" style="margin:0 0 3px">Recurring billing</div><div class="cd">Auto-draft every 30 days. 3-day grace, paused after 3, late fee after 7, terminated after 14.</div></div></div>
     </div>
     <div class="talk"><div class="lh">Talk track</div><p>Order is everything: sign, then pay, then onboard. Never schedule onboarding before the payment clears.</p></div>
   </section>
@@ -225,13 +232,28 @@
     <div class="rows">
       <div class="card"><b>Lead Gen (Google / LSA)</b><div class="cd">Setter 40% &middot; Closer 25% of first bi-weekly invoice. No setter, closer gets 40%.</div></div>
       <div class="card"><b>Website</b><div class="cd">Ad Manager 30% &middot; Setter 20% &middot; Closer 30% from Setter + 20% from Ad Manager.</div></div>
-      <div class="card"><b>AI Receptionist</b><div class="cd">Setter or Ad Manager 25% &middot; Closer 40% of first bi-weekly invoice.</div></div>
+      <div class="card"><b>AI Receptionist</b><div class="cd">Setter or Ad Manager 25% &middot; Closer 40% of first invoice.</div></div>
       <div class="card"><b>DGS</b><div class="cd">Setter or Ad Manager 25% &middot; Closer 60% of first month.</div></div>
       <div class="card"><b>Meta Ads</b><div class="cd">Follows the Standard Lead Gen split (confirm with Grant).</div></div>
     </div>
   </section>
 
-  <!-- 12 WHEN PAID + REFUNDS -->
+  <!-- 12 REAL DOLLARS -->
+  <section class="slide">
+    <div class="kicker">Your Payout &middot; In Real Dollars</div>
+    <h2 class="title">What you actually make</h2>
+    <div class="card">
+      <div class="pay"><div><div class="svc">Google Ads</div><div class="ex">on a ~$500 first invoice</div></div><div class="amt">Setter <b>$200</b> &middot; Closer <b>$125</b></div></div>
+      <div class="pay"><div><div class="svc">Website</div><div class="ex">on a $1,000 site</div></div><div class="amt">Setter <b>$200</b> &middot; Closer <b>$200-300</b> &middot; Ad Mgr <b>$300</b></div></div>
+      <div class="pay"><div><div class="svc">AI Receptionist</div><div class="ex">on a $1,500 setup</div></div><div class="amt">Setter <b>$375</b> &middot; Closer <b>$600</b></div></div>
+      <div class="pay"><div><div class="svc">DGS</div><div class="ex">on $500/mo</div></div><div class="amt">Setter <b>$125</b> &middot; Closer <b>$300</b></div></div>
+      <div class="pay"><div><div class="svc">Meta Ads</div><div class="ex">per booked job, follows Lead Gen</div></div><div class="amt">Setter <b>40%</b> &middot; Closer <b>25%</b></div></div>
+    </div>
+    <p class="lead" style="margin-top:14px;font-size:14px;">Example deal sizes shown. Your payout scales with the deal, and commission pays once (the first invoice or first month).</p>
+    <div class="talk"><div class="lh">Talk track</div><p>This is your "why." Close a website and an AI desk in the same week and that is over $800 in your pocket from two deals. Stack services, stack income.</p></div>
+  </section>
+
+  <!-- 13 WHEN PAID + REFUNDS -->
   <section class="slide">
     <div class="kicker">Part 4 &middot; When You Get Paid</div>
     <h2 class="title">When commission locks</h2>
@@ -245,12 +267,54 @@
     <div class="talk"><div class="lh">Talk track</div><p>Your commission locks once the client pays AND sticks 14 days. Sell clients who stay, not just ones who sign.</p></div>
   </section>
 
-  <!-- 13 CLOSE -->
+  <!-- 14 HOW TO PITCH IT: SETTING FLOW -->
+  <section class="slide">
+    <div class="kicker">How To Pitch It &middot; Setting The Call</div>
+    <h2 class="title">The setting flow</h2>
+    <div class="rows">
+      <div class="row"><div class="num">1</div><div class="qtext">Open with the benefit: "Can you take on about 10 more details a week?"</div></div>
+      <div class="row"><div class="num">2</div><div class="qtext">Find the want: "Are you looking to bring on more work?"</div></div>
+      <div class="row"><div class="num">3</div><div class="qtext">Quick discovery: current volume, capacity, do they do ceramics?</div></div>
+      <div class="row"><div class="num">4</div><div class="qtext">Pitch it simple, in their language: jobs, not jargon</div></div>
+      <div class="row"><div class="num">5</div><div class="qtext">Stay transparent, differentiate, fold in what they already have</div></div>
+      <div class="row"><div class="num">6</div><div class="qtext">Scarcity, then book the call</div></div>
+    </div>
+    <div class="talk"><div class="lh">Talk track</div><p>The setter's only job is to book a qualified call. Lead with more jobs, keep it simple, and pin a specific time. Closing happens on the next call.</p></div>
+  </section>
+
+  <!-- 15 THE PITCH IN PLAIN ENGLISH -->
+  <section class="slide">
+    <div class="kicker">The Pitch &middot; Word For Word</div>
+    <h2 class="title">Say it like this</h2>
+    <div class="rows">
+      <div class="card"><div class="saythis">The hook</div><div class="cd pitch">"I bring detailers more jobs. About 8 to 15 details a week, plus around 10 ceramic coatings a month."</div></div>
+      <div class="card"><div class="saythis">The price, simple</div><div class="cd pitch">"No money up front. We cover ad spend and get you ranked #1 on Google. We just take 10% of your detail per qualified lead. A $200 detail, that's $20."</div></div>
+      <div class="card"><div class="saythis">The "what's the catch"</div><div class="cd pitch">"The catch is we keep that 10%. That's it. We only charge for real buying-intent leads, not price-shoppers."</div></div>
+      <div class="card"><div class="saythis">The "why so cheap" + scarcity</div><div class="cd pitch">"Low turnover. We grow with you, and we have other services, so when we make you money you reinvest. And we only work with one detailer per major city, since there's only one #1 on Google."</div></div>
+    </div>
+    <div class="talk"><div class="lh">Talk track</div><p>If they already run Facebook or have Google reviews, fold it in: "Perfect, we connect your reviews and put our ads behind you." Never fight what they have, build on it.</p></div>
+  </section>
+
+  <!-- 16 LOCK THE CALL -->
+  <section class="slide">
+    <div class="kicker">Close The Set</div>
+    <h2 class="title">Lock the call</h2>
+    <div class="rows">
+      <div class="row"><div class="num">1</div><div class="qtext">"Let's hop on a quick Zoom to go over everything and see if it's a fit."</div></div>
+      <div class="row"><div class="num">2</div><div class="qtext">Offer a specific time: "Free tomorrow morning or evening? I've got 6 PM."</div></div>
+      <div class="row"><div class="num">3</div><div class="qtext">Pin it, confirm the timezone, get their email for the invite</div></div>
+      <div class="row"><div class="num">4</div><div class="qtext">Grab their website / details so the closer is prepped</div></div>
+    </div>
+    <p class="lead" style="margin-top:16px;color:#fde68a;">A set isn't a set until a specific time is on the calendar and you have their email.</p>
+    <div class="talk"><div class="lh">Talk track</div><p>Never leave it at "sometime tomorrow." Pin the exact hour, confirm the timezone, and send the invite while you're still on the phone.</p></div>
+  </section>
+
+  <!-- 17 CLOSE -->
   <section class="slide">
     <div class="mark"><span></span><span></span><span></span></div>
     <div class="kicker">The One-Line Lesson</div>
     <h1 class="title" style="font-size:clamp(26px,5.4vw,44px);">Know the service.<br><span class="gold">Sell the benefit. Get paid when they pay.</span></h1>
-    <p class="lead" style="margin-top:20px;">Google Ads, Website, AI Receptionist, DGS, Meta Ads. Match the service to their pain, pitch the result, and bundle as they grow.</p>
+    <p class="lead" style="margin-top:20px;">Five services, real dollars on every one, and a pitch that books the call. Match the service to their pain, pitch the result, and pin the time.</p>
     <p class="lead" style="margin-top:10px;">More training: <a class="reflink" href="https://grantenyeart.github.io/closer-playbook/" target="_blank" rel="noopener">Closer's Playbook</a> &middot; <a class="reflink" href="https://grantenyeart.github.io/website-playbook/" target="_blank" rel="noopener">Website Pitch</a></p>
     <div class="foot"><div class="big-takeaway gold" style="font-size:clamp(20px,4vw,28px);">Now go sell.</div></div>
   </section>
